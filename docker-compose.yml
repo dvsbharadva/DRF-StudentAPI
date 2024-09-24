@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/django-studentapi
+    ports:
+      - 8000:8000
+    image: app:django-studentapi
+    container_name: DRFStudentAPI
+    command: python manage.py runserver 0.0.0.0:8000
